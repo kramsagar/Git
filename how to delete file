@@ -1,0 +1,43 @@
+
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ ls -ltr
+-rw-r--r-- 1 Dell 197121 54 Jan 24 18:31 f5
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git rm f5
+rm 'f5'
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    f5
+
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git commit -m "removed f5"
+[master 968321e] removed f5
+ 1 file changed, 2 deletions(-)
+ delete mode 100644 f5
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ ls -ltr
+total 3
+-rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 fx
+-rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 f2x
+-rw-r--r-- 1 Dell 197121 36 Jan 24 18:31 f3
+-rw-r--r-- 1 Dell 197121  0 Jan 24 18:31 f4-nex
+drwxr-xr-x 1 Dell 197121  0 Jan 24 18:52 sourcecode/
+drwxr-xr-x 1 Dell 197121  0 Jan 24 18:57 sccode/
+drwxr-xr-x 1 Dell 197121  0 Jan 24 19:06 sc1/
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$
+
