@@ -1,0 +1,94 @@
+======> We have added directory. but git status doesnt track of it. But if you modify/add/delete git detect and versioning only files. see below:
+** It track the directory if it has some files in it. But not empty folder.
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $ mkdir sourcecode
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $ ls -ltr
+                      total 4
+                      -rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 fx
+                      -rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 f2x
+                      -rw-r--r-- 1 Dell 197121 36 Jan 24 18:31 f3
+                      -rw-r--r-- 1 Dell 197121 54 Jan 24 18:31 f5
+                      -rw-r--r-- 1 Dell 197121  0 Jan 24 18:31 f4-nex
+                      drwxr-xr-x 1 Dell 197121  0 Jan 24 18:47 sourcecode/
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $ git status
+                      On branch master
+                      nothing to commit, working tree clean
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $ touch f6
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $ git status
+                      On branch master
+                      Untracked files:
+                        (use "git add <file>..." to include in what will be committed)
+                              f6
+                      
+                      nothing added to commit but untracked files present (use "git add" to track)
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $
+
+=============================================Above is empty folde, below is the behavior after files created under dir================================================
+
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $ mkdir sccode
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $ cd sccode/
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code/sccode (master)
+                      $ touch sc-code1
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code/sccode (master)
+                      $ cd ..
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $ pwd
+                      /d/devops/Batch6/code
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $ ls -ltr
+                      total 4
+                      -rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 fx
+                      -rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 f2x
+                      -rw-r--r-- 1 Dell 197121 36 Jan 24 18:31 f3
+                      -rw-r--r-- 1 Dell 197121 54 Jan 24 18:31 f5
+                      -rw-r--r-- 1 Dell 197121  0 Jan 24 18:31 f4-nex
+                      -rw-r--r-- 1 Dell 197121  0 Jan 24 18:49 f6
+                      drwxr-xr-x 1 Dell 197121  0 Jan 24 18:52 sourcecode/
+                      drwxr-xr-x 1 Dell 197121  0 Jan 24 18:56 sccode/
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $ ls -ltr sccode/sc-code1
+                      -rw-r--r-- 1 Dell 197121 0 Jan 24 18:56 sccode/sc-code1
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $ touch sccode/sc-code2
+                      
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $ git add sccode/
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $ git commit -m "commit directory"
+                      [master cbddfcd] commit directory
+                       2 files changed, 0 insertions(+), 0 deletions(-)
+                       create mode 100644 sccode/sc-code1
+                       create mode 100644 sccode/sc-code2
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $ git status
+                      On branch master
+                      nothing to commit, working tree clean
+                      
+                      Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+                      $
+                      
+
+
