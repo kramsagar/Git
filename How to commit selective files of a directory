@@ -1,0 +1,78 @@
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ mkdir sc1
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ cd sc1/
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code/sc1 (master)
+$ touch f1
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code/sc1 (master)
+$ touch f2
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code/sc1 (master)
+$ cd ..
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ pwd
+/d/devops/Batch6/code
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ ls -ltr
+total 4
+-rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 fx
+-rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 f2x
+-rw-r--r-- 1 Dell 197121 36 Jan 24 18:31 f3
+-rw-r--r-- 1 Dell 197121 54 Jan 24 18:31 f5
+-rw-r--r-- 1 Dell 197121  0 Jan 24 18:31 f4-nex
+-rw-r--r-- 1 Dell 197121  0 Jan 24 18:49 f6
+drwxr-xr-x 1 Dell 197121  0 Jan 24 18:52 sourcecode/
+drwxr-xr-x 1 Dell 197121  0 Jan 24 18:57 sccode/
+drwxr-xr-x 1 Dell 197121  0 Jan 24 19:00 sc1/
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ ls -ltr sc1/f1 sc1/f2
+-rw-r--r-- 1 Dell 197121 0 Jan 24 19:00 sc1/f1
+-rw-r--r-- 1 Dell 197121 0 Jan 24 19:00 sc1/f2
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sc1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git add sc1/f1
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   sc1/f1
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sc1/f2
+
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git commit -m "selective file commit" sc1/f1
+[master f825ba0] selective file commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 sc1/f1
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sc1/f2
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$
