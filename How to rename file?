@@ -1,0 +1,44 @@
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ ls -ltr
+total 4
+-rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 fx
+-rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 f2x
+-rw-r--r-- 1 Dell 197121 36 Jan 24 18:31 f3
+-rw-r--r-- 1 Dell 197121 54 Jan 24 18:31 f5
+-rw-r--r-- 1 Dell 197121  0 Jan 24 18:31 f4
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git mv f4 f4-nex
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    f4 -> f4-nex
+
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git commit -m "rename f4 file"
+[master 525398e] rename f4 file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename f4 => f4-nex (100%)
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git log
+commit 525398efe719512a99be95f1656991d3288c0bd7 (HEAD -> master)
+Author: =Mahe <=Mahe@gmail>
+Date:   Wed Jan 24 18:39:43 2024 +0530
+
+    rename f4 file
+
+commit 65a2a2336bddeea650a3ef65429402380906c42a
+Author: =Mahe <=Mahe@gmail>
+Date:   Wed Jan 24 18:39:02 2024 +0530
+
+    renamed files
