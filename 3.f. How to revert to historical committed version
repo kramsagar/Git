@@ -1,1 +1,78 @@
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ ls -ltr
+total 3
+-rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 fx
+-rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 f2x
+-rw-r--r-- 1 Dell 197121 36 Jan 24 18:31 f3
+-rw-r--r-- 1 Dell 197121  0 Jan 24 18:31 f4-nex
+drwxr-xr-x 1 Dell 197121  0 Jan 24 18:52 sourcecode/
+drwxr-xr-x 1 Dell 197121  0 Jan 24 18:57 sccode/
+drwxr-xr-x 1 Dell 197121  0 Jan 24 19:06 sc1/
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git log --oneline
+968321e (HEAD -> master) removed f5
+5dabfe6 moved f6 file to new location
+0fe0eff commit alll
+f825ba0 selective file commit
+cbddfcd commit directory
+9314375 commit all
+525398e rename f4 file
+65a2a23 renamed files
+7738c87 new fx file
+d5ab96f add changes
+4432d9d latest f5
+6533888 commit f4
+21a0a76 commit f3 file by Mahe
+68885dc commit f1 and f2 files
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git checkout 68885dc
+Note: switching to '68885dc'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 68885dc commit f1 and f2 files
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code ((68885dc...))
+$ ls -ltr
+total 2
+-rw-r--r-- 1 Dell 197121 23 Jan 24 19:24 f2
+-rw-r--r-- 1 Dell 197121 23 Jan 24 19:24 f1
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code ((68885dc...))
+$ git checkout 968321e
+Previous HEAD position was 68885dc commit f1 and f2 files
+HEAD is now at 968321e removed f5
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code ((968321e...))
+$ ls -ltr
+total 3
+drwxr-xr-x 1 Dell 197121  0 Jan 24 19:25 sourcecode/
+drwxr-xr-x 1 Dell 197121  0 Jan 24 19:25 sccode/
+drwxr-xr-x 1 Dell 197121  0 Jan 24 19:25 sc1/
+-rw-r--r-- 1 Dell 197121 23 Jan 24 19:25 fx
+-rw-r--r-- 1 Dell 197121  0 Jan 24 19:25 f4-nex
+-rw-r--r-- 1 Dell 197121 36 Jan 24 19:25 f3
+-rw-r--r-- 1 Dell 197121 23 Jan 24 19:25 f2x
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code ((968321e...))
+$ date
+Wed Jan 24 19:25:50 IST 2024
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code ((968321e...))
+$
 
