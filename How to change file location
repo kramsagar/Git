@@ -1,0 +1,52 @@
+######### Move f6 file to sc1 folder:
+============================================================================================
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ ls -ltr
+total 4
+-rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 fx
+-rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 f2x
+-rw-r--r-- 1 Dell 197121 36 Jan 24 18:31 f3
+-rw-r--r-- 1 Dell 197121 54 Jan 24 18:31 f5
+-rw-r--r-- 1 Dell 197121  0 Jan 24 18:31 f4-nex
+-rw-r--r-- 1 Dell 197121  0 Jan 24 18:49 f6
+drwxr-xr-x 1 Dell 197121  0 Jan 24 18:52 sourcecode/
+drwxr-xr-x 1 Dell 197121  0 Jan 24 18:57 sccode/
+drwxr-xr-x 1 Dell 197121  0 Jan 24 19:00 sc1/
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git mv f6 sc1/f6
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    f6 -> sc1/f6
+
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git commit -m "moved f6 file to new location"
+[master 5dabfe6] moved f6 file to new location
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename f6 => sc1/f6 (100%)
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$ ls -ltr
+total 4
+-rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 fx
+-rw-r--r-- 1 Dell 197121 23 Jan 24 18:31 f2x
+-rw-r--r-- 1 Dell 197121 36 Jan 24 18:31 f3
+-rw-r--r-- 1 Dell 197121 54 Jan 24 18:31 f5
+-rw-r--r-- 1 Dell 197121  0 Jan 24 18:31 f4-nex
+drwxr-xr-x 1 Dell 197121  0 Jan 24 18:52 sourcecode/
+drwxr-xr-x 1 Dell 197121  0 Jan 24 18:57 sccode/
+drwxr-xr-x 1 Dell 197121  0 Jan 24 19:06 sc1/
+
+Dell@DESKTOP-7TUUEEC MINGW64 /d/devops/Batch6/code (master)
+$
